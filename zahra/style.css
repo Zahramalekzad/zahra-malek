@@ -1,0 +1,281 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+.container {
+    width: 1300px;
+    margin: 90px auto;
+  }
+
+
+/* navbar */
+nav {
+    background: #e9eff3;
+    height: 80px;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+  }
+  label.logo {
+    color: black;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  nav ul {
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a {
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    padding: 7px 13px;
+    text-decoration: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,
+  a:hover {
+    background: #1b9bff;
+    transition: 0.5s;
+  }
+  .checkbtn  {
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check {
+    display: none;
+  }
+  @media (max-width: 952px) {
+    label.logo {
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px) {
+    .checkbtn {
+      display: block;
+    }
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+    }
+    nav ul li {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a {
+      font-size: 20px;
+    }
+    a:hover,
+    a.active {
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul  {
+      left: 0;
+    }
+   
+  }
+  /* navbar */
+  
+  /* home */
+.home{
+    background-image: url(./img/mario-gogh-VBLHICVh-lI-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.home-info{
+    display: flex;
+    padding: 222px 33px;
+    flex-direction: column;
+    align-items: start;
+    width: 50%;
+}
+
+.home-info h1{
+    font-size: 44px;
+    color: #e9eff3;
+    margin-bottom: 22px;
+}
+.home-info p{
+    font-size: 23px;
+    color: #e9eff3;
+    margin-bottom: 22px;
+}
+.home-info a{
+    border: 1px solid wheat;
+    text-decoration: none;
+    color: black;
+    background: #e9eff3;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 18px;
+}
+  /* end home */
+
+  .About{
+    display: flex;
+    margin: 90px 80px;
+   gap: 52px;
+
+}
+.About img{
+    box-shadow: 8px 0px 8px 0px rgba(0,0,0,0.25);
+-webkit-box-shadow: 8px 0px 8px 0px rgba(0,0,0,0.25);
+-moz-box-shadow: 8px 0px 8px 0px rgba(0,0,0,0.25);
+    width: 520px;
+    border-radius: 6px;
+}
+.About h1{
+    font-size: 44px;
+    margin-bottom: 23px;
+}
+.About h4{
+    font-size: 34px;
+    margin-bottom: 23px;
+}
+.About p{
+    font-size:18px;
+    letter-spacing: 1.3px;
+    margin-bottom: 33px;
+}
+
+/* end about */
+
+/* discover */
+.title{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+.card-white {
+    background: white;
+    box-shadow: 0 0 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    padding: 24px;
+    margin: 8px;
+    flex-grow: 1;
+  }
+  
+  .card-white img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .card-white h3 {
+    margin: 18px 0px;
+    text-align: center;
+  }
+  .card-white p {
+
+  }
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 66px;
+  }
+  
+  
+  @media (min-width: 300px) {
+    .container {
+      width: 200px;
+    }
+    .cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (min-width: 700px) {
+    .container {
+      width: 600px;
+    }
+    .cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    .container {
+      width: 1000px;
+    }
+    .cards {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+/* end discover */
+
+/* fottter */
+footer{
+    padding:50px 0px;
+    text-align: center;
+    background-color: #8c9197;
+}
+/* end  fottter */
+
+
+@media (max-width: 952px) {
+    .About{
+        display: block;
+        margin: 90px 80px;
+       gap: 52px;
+    }
+    .About img{
+        width: 100%;
+    }
+    .home{
+        height: 100%;
+    }
+    .home-info{
+        width: 90%;
+    }
+}
+@media (max-width: 452px){
+ .About{
+    margin: 90px 16px;
+ }
+ .title{
+    font-size: 23px;
+     }
+     .home{
+        width: 100%;
+     }
+}
